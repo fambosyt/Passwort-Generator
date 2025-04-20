@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Passwort Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .options {
+      margin-top: 1rem;
+    }
+
+    .options label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #password {
+      margin-top: 1rem;
+      font-weight: bold;
+      word-break: break-all;
+      background: #e9ecef;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Passwort Generator</h1>
+
+  <label for="length">Länge des Passworts:</label>
+  <input type="number" id="length" min="4" max="100" value="16">
+
+  <div class="options">
+    <label><input type="checkbox" id="uppercase" checked> Großbuchstaben</label>
+    <label><input type="checkbox" id="lowercase" checked> Kleinbuchstaben</label>
+    <label><input type="checkbox" id="numbers" checked> Zahlen</label>
+    <label><input type="checkbox" id="symbols"> Sonderzeichen</label>
+  </div>
+
+  <button onclick="generatePassword()">Passwort generieren</button>
+
+  <div id="password"></div>
+
+  <script>
+    function generatePassword() {
+      const length = document.getElementById("length").value;
+      const useUpper = document.getElementById("uppercase").checked;
+      const useLower = document.getElementById("lowercase").checked;
+      const useNumbers = document.getElementById("numbers").checked;
+      const useSymbols = document.getElementById("symbols").checked;
+
+      let characters = "";
+      if (useUpper) characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      if (useLower) characters += "abcdefghijklmnopqrstuvwxyz";
+      if (useNumbers) characters += "0123456789";
+      if (useSymbols) characters += "!@#$%^&*()-_=+[]{}|;:,.<>?";
+
+      if (characters.length === 0) {
+        document.getElementById("password").textContent = "⚠️ Bitte mindestens eine Zeichenart auswählen.";
+        return;
+      }
+
+      let password = "";
+      for (let i = 0; i < length; i++) {
+        password += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+
+      document.getElementById("password").textContent = password;
+    }
+  </script>
+</body>
+</html>
