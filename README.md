@@ -1,17 +1,21 @@
-# 🔐 Passwort Generator (Python)
+# 🔐 Passwort Generator (HTML + JavaScript)
 
-Ein einfacher, anpassbarer Passwort-Generator für sichere Passwörter.
+Ein einfacher, interaktiver Passwort-Generator im Browser. Keine Installation notwendig – einfach im Browser öffnen und sichere Passwörter erstellen!
 
-## Features
+## 💡 Features
 
-- Länge frei wählbar
-- Ein/Ausschalten von:
-  - Großbuchstaben
-  - Kleinbuchstaben
-  - Zahlen
-  - Sonderzeichen
+- Wähle die gewünschte Passwortlänge
+- Aktiviere/deaktiviere:
+  - ✅ Großbuchstaben
+  - ✅ Kleinbuchstaben
+  - ✅ Zahlen
+  - ✅ Sonderzeichen
+- Sofortige Passwort-Generierung
+- Komplett offline nutzbar
 
-## Nutzung
+## 🚀 Nutzung
 
-```bash
-python password_generator.py
+1. Klone das Repository oder lade die `index.html` herunter:
+   ```bash
+   git clone https://github.com/dein-benutzername/passwort-generator.git
+   cd passwort-generator
