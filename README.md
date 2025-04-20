@@ -17,5 +17,5 @@ Ein einfacher, interaktiver Passwort-Generator im Browser. Keine Installation no
 
 1. Klone das Repository oder lade die `index.html` herunter:
    ```bash
-   git clone https://github.com/dein-benutzername/passwort-generator.git
+   git clone https://github.com/fambosyt/passwort-generator.git
    cd passwort-generator
