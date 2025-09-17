@@ -99,8 +99,12 @@
       }
 
       let password = "";
+      const array = new Uint32Array(length);
+      crypto.getRandomValues(array);
       for (let i = 0; i < length; i++) {
-        password += characters.charAt(Math.floor(Math.random() * characters.length));
+        const array = new Uint32Array(1);
+        crypto.getRandomValues(array);
+        password += characters.charAt(array[0] % characters.length);
       }
 
       document.getElementById("password").textContent = password;
