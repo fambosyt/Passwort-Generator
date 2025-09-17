@@ -99,8 +99,6 @@
       }
 
       let password = "";
-      const array = new Uint32Array(length);
-      crypto.getRandomValues(array);
       for (let i = 0; i < length; i++) {
         const array = new Uint32Array(1);
         crypto.getRandomValues(array);
