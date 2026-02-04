@@ -13,6 +13,10 @@ Ein einfacher, interaktiver Passwort-Generator im Browser. Keine Installation no
 - Sofortige Passwort-Generierung
 - Komplett offline nutzbar
 
+## 🌍 Live-Version
+
+👉 [https://passwortgenerator.fambosyt.eu/](https://passwortgenerator.fambosyt.eu/)
+
 ## 🚀 Nutzung
 
 1. Klone das Repository oder lade die `index.html` herunter:
